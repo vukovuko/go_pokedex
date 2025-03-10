@@ -1,0 +1,24 @@
+# Compiled binary files (the executable produced by go build)
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries (produced by "go test -c")
+*.test
+
+# Coverage output (from "go test -coverprofile")
+*.out
+
+# Log files
+*.log
+
+# Vendor directory (if you're using Go modules, this is usually not needed,
+# but if you vendor dependencies, you might want to ignore it)
+vendor/
+
+# IDE/editor specific files
+.vscode/
+.idea/
+
