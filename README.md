@@ -17,32 +17,37 @@ A simple command-line Pokedex application built in Go. This project allows you t
 ## Installation
 
 1. **Clone the Repository:**
-
+    ```bash
     git clone https://github.com/vukovuko/go_pokedex.git
     cd go_pokedex
+    ```
 
 2. **Download Dependencies:**
-
+    ```bash
     go mod download
+    ```
 
 ## Running the Application
 
 You have two options to run the application:
 
 ### Option 1: Run Directly with `go run`
-
+    ```bash
     go run main.go
+    ```
 
 ### Option 2: Build and Run the Executable
 
 1. Build the application:
-
+    ```bash
     go build -o pokedex
+    ```
 
 2. Run the generated executable:
-
+    ```bash
     ./pokedex
-
+    ```
+    
 ## How to Play
 
 Once the application starts, you'll see a prompt:
