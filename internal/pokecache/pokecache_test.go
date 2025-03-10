@@ -28,11 +28,11 @@ func TestAddGet(t *testing.T) {
 			cache.Add(c.key, c.val)
 			val, ok := cache.Get(c.key)
 			if !ok {
-				t.Errorf("expected to find key %q", c.key)
+				t.Errorf("expected to find key")
 				return
 			}
 			if string(val) != string(c.val) {
-				t.Errorf("expected value %q, got %q", c.val, val)
+				t.Errorf("expected to find value")
 				return
 			}
 		})
@@ -55,7 +55,7 @@ func TestReapLoop(t *testing.T) {
 
 	_, ok = cache.Get("https://example.com")
 	if ok {
-		t.Errorf("expected key to be expired")
+		t.Errorf("expected to not find key")
 		return
 	}
 }

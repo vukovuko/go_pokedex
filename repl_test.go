@@ -1,7 +1,6 @@
 package main
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -11,27 +10,35 @@ func TestCleanInput(t *testing.T) {
 		expected []string
 	}{
 		{
+			input:    "  ",
+			expected: []string{},
+		},
+		{
+			input:    "  hello  ",
+			expected: []string{"hello"},
+		},
+		{
 			input:    "  hello  world  ",
 			expected: []string{"hello", "world"},
 		},
 		{
-			input:    "Charmander Bulbasaur PIKACHU",
-			expected: []string{"charmander", "bulbasaur", "pikachu"},
-		},
-		{
-			input:    "  singleword  ",
-			expected: []string{"singleword"},
-		},
-		{
-			input:    "   ",
-			expected: []string{},
+			input:    "  HellO  World  ",
+			expected: []string{"hello", "world"},
 		},
 	}
 
 	for _, c := range cases {
 		actual := cleanInput(c.input)
-		if !reflect.DeepEqual(actual, c.expected) {
-			t.Errorf("For input %q, expected %v, but got %v", c.input, c.expected, actual)
+		if len(actual) != len(c.expected) {
+			t.Errorf("lengths don't match: '%v' vs '%v'", actual, c.expected)
+			continue
+		}
+		for i := range actual {
+			word := actual[i]
+			expectedWord := c.expected[i]
+			if word != expectedWord {
+				t.Errorf("cleanInput(%v) == %v, expected %v", c.input, actual, c.expected)
+			}
 		}
 	}
 }

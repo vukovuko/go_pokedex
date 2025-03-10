@@ -1,3 +1,6 @@
+go_pokedex
+repl.log
+
 # Compiled binary files (the executable produced by go build)
 *.exe
 *.exe~
