@@ -35,7 +35,6 @@ You have two options to run the application:
     ```bash
     go run main.go
     ```
-
 ### Option 2: Build and Run the Executable
 
 1. Build the application:
