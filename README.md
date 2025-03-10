@@ -32,9 +32,7 @@ A simple command-line Pokedex application built in Go. This project allows you t
 You have two options to run the application:
 
 ### Option 1: Run Directly with `go run`
-    ```bash
     go run main.go
-    ```
 ### Option 2: Build and Run the Executable
 
 1. Build the application:
